@@ -1,0 +1,26 @@
+<!-- Loop over each object in the projects array and show all pets -->
+<div id="pet-gallery" class="d-flex justify-content-evenly">
+  {{#each cars as |car| }}
+  <div id="pet-cards" class="card row mb-4 project">
+    <div class="col-md-7">
+      <h2>
+        <a href="/pet/{{pet.id}}"> {{car.title}}</a>
+      </h2>
+      <p><img href="/pet/{{pet.photourl}}"></p>
+      <p><b>Currently owned by:</b> {{{car.user.name}}}</p>
+    </div>
+    <div class="col-md-7">
+      <p>
+        <b>Breed:</b> {{car.manufacturer}}
+      </p>
+    </div>
+    
+   
+
+
+
+  </div>
+
+  {{/each}}
+</div>
+
