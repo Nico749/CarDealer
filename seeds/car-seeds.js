@@ -24,6 +24,13 @@ const carData = [
     mileage: 111000,
     user_id: 3
     },
+    { title: "A4",
+    manufacturer: "Audi",
+    description: "wonderful audi sedan",
+    price: 8000,
+    mileage: 260000,
+    user_id: 3
+    },
     { title: "Zafira",
     manufacturer: "Opel",
     description: "wonderful opel",

@@ -1,0 +1,105 @@
+{{!-- handlebar for when we log in --}}
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="container d-flex flex-row justify-content-evenly">
+  <div class="row mt-4">
+    <div>
+      <h3>Add a new pet:</h3>
+
+      <form class="container form new-pet-form row petform">
+
+        <div class="form-group col col-md-auto">
+          <label id="formpet" class="fs-5 w-75" for="pet-name">Pet name: </label> <br>
+          <label id="formpet" class="fs-5 w-50" for="pet-species">Species:</label><br>
+          <label id="formpet" class="fs-5 w-50" for="pet-breed">Breed:</label><br>
+          <label id="formpet" class="fs-5 w-50" for="pet-age">Age:</label><br>
+          <label id="formpet" class="fs-5 w-50" for="pet-sex">Gender:</label><br>
+          <label id="formpet" class="fs-5 w-50" for="pet-isvaccinated">Vaccinated:</label><br>
+          <label id="formpet" class="fs-5 w-50" for="pet-ismicrochipped">Microchipped:</label><br>
+          <label id="formpet" class="fs-5 w-50" for="pet-isdesexed">Desexed:</label><br>
+          <label id="formpet" class="fs-5 w-50" for="pet-desc">Description:</label> <br><br>
+          {{!-- <label id="formpet" class="fs-5 w-50" for="pet-photourl">Pic Url:</label> <br> --}}
+
+
+
+
+        </div>
+
+        <div class="form-group col col-md-auto">
+          <input class="form-input rounded w-100 " type="text" id="pet-name" name="pet-name" placeholder="e.g. Bruno" />
+          <br>
+          <input class="form-input rounded w-100" type="text" id="pet-species" name="pet-species"
+            placeholder="e.g. Dog" /><br>
+
+          <input class="form-input rounded w-100" type="text" id="pet-breed" name="pet-breed"
+            placeholder="e.g. Labrador" /><br>
+
+          <input class="form-input rounded w-100" type="text" id="pet-age" name="pet-age" placeholder="e.g. 2" /><br>
+
+          <select class="form-input rounded w-100" name="pet-sex" id="pet-sex" placeholder="Gender">
+            <option value="" disabled selected hidden>Please Choose...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select><br>
+
+          <select class="form-input rounded w-100 p-1" name="pet-isvaccinated" id="pet-isvaccinated"
+            placeholder="Yes / No">
+            <option value="" disabled selected hidden>Please Choose...</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select><br>
+
+          <select class="form-input rounded w-100 p-1" name="pet-ismicrochipped" id="pet-ismicrochipped"
+            placeholder="Yes / No">
+            <option value="" disabled selected hidden>Please Choose...</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select><br>
+
+          <select class="form-input rounded w-100 p-1" name="pet-isdesexed" id="pet-isdesexed" placeholder="Yes / No">
+            <option value="" disabled selected hidden>Please Choose...</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select><br>
+
+          <textarea style="resize: none;" wrap="hard" class="form-input w-100 rounded" id="pet-desc" name="pet-desc"
+            placeholder="Provide a short description"></textarea> <br>
+
+          {{!-- <input class="form-input rounded w-100 p-0" type="text" id="pet-photourl" name="pet-photourl" placeholder="http:pinterest.com/cat1" /><br><br> --}}
+        </div>
+
+
+        <div class="form-group">
+          <button id="submit-pet" type="submit" class="btn btn-primary w-75 start-0">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  {{!-- we can cancel pets that we posted before --}}
+  {{#if cars.length}}
+  <div class="col-md-6 project-list">
+    <br>
+    <h3>Current Cars:</h3>
+
+    {{#each cars as |car|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4 class="pet-name-add"><a id ="petname" href="/pet/{{car.id}}">{{title}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger delete-pet" data-id="{{car.id}}">DELETE <i
+            class="bi bi-trash"></i></button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="/js/profile.js"></script>

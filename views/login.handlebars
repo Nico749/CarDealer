@@ -1,0 +1,65 @@
+{{!-- login and signup handlebars --}}
+<div class="h-auto">
+  <div id="form-container" class="row d-flex justify-content-evenly ">
+    <div class="card col-md-auto pt-3 pb-3 user-forms">
+      <form class="form login-form">
+        <h2 class="text-start">LOGIN </h2>
+        <br>
+        <div class="container">
+          <div class="row align-items-start w-auto">
+
+            <div class="col col-md-auto">
+              <label class="p-1" for="email-login">Email:</label><br>
+              <label class="p-1" id ="signupphone"for="password-login">Password:</label>
+            </div>
+
+            <div class="col col-md-auto">
+              <input class=" form-input" type="text" id="email-login" placeholder="catgirl123@hotmail.com" />
+              <br>
+              <input placeholder="*********" class="form-input" type="password" id="password-login" />
+            </div>
+
+          </div>
+          <br>
+          <div class="form-group p1 position relative">
+            <button class="btn btn-primary w-100 " type="submit">Login</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="card col-md-auto pt-3 pb-3 user-forms">
+      <form class="form signup-form">
+        <h2 id="sign-up-h2"> SIGN UP</h2>
+
+        <div class="container">
+          <div class="row align-items-start w-auto">
+
+            <div id ="signupform" class="col col-md-auto ">
+              <label class="p-1" for="name-signup">Name:</label> <br>
+              <label class="p-1" for="email-signup">Email:</label> <br>
+              <label class="p-1" for="password-signup">Password:</label> <br>
+              <label class="p-1" id ="signupphone" for="phone-signup">Phone:</label>
+            </div>
+
+            <div class="col col-md-auto">
+              <input class="form-input" type="text" id="name-signup" placeholder="John Smith" /><br>
+              <input class="form-input" type="text" id="email-signup" placeholder="iheartdogs@gmail.com" /><br>
+              <input class="form-input" type="password" id="password-signup"
+                placeholder="Min of 9 characters" /><br>
+              <input class="form-input" type="text" id="phone-signup" placeholder="" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary w-100 mb-2" type="submit">Signup</button>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+</div>
+<script src="/js/login.js"></script>

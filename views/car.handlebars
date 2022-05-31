@@ -1,0 +1,50 @@
+{{!-- handlebar for when we retrieve a single car --}}
+
+<div id="pet-cards" class="container w-25 card single-pet-card">
+  <div class="text-center">
+    <h2>{{title}}</h2>
+
+    <div class="text-start">
+      <p><b>Price:</b> ${{price}}</p>
+
+    
+      <p>
+        <b>Mileage:</b> {{mileage}} km
+      </p>
+      <p>
+        <b>Manufacturer:</b> {{manufacturer}}
+      </p>
+
+      <p>
+        <b>Description:</b> {{description}}
+      </p>
+
+
+      {{#if logged_in}} {{!-- These items will only show when logged in --}}
+
+     
+      <p>
+        <b><li><a href=mailto:{{{user.name}}} class="btn btn-reverse">Contact Seller</a></li></b> 
+      </p>
+           
+
+
+
+      {{!-- <p>
+        <b>Vaccinated:</b> {{isvaccinated}}
+      </p>
+
+      <p>
+        <b>Microchipped:</b> {{ismicrochipped}}
+      </p>
+
+      <p>
+        <b>Desexed:</b> {{isdesexed}}
+      </p> --}}
+      {{/if}}
+
+      {{!-- <p><b>Image Link:  </b><a href="{{photourl}}">Click Me!</p> --}}
+
+    </div>
+  </div>
+</div>
