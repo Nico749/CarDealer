@@ -1,0 +1,37 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add A Car</h1>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      {{!-- we declare a post request  --}}
+      <form action="/gigs/add" method="POST">
+        <div class="input-group">
+          <label for="title">Model</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="eg. Focus, A3, C4, 500..."
+            maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="technologies">Manufacturer</label>
+          <input type="text" name="technologies" id="technologies" class="input-box" placeholder="eg. Audi, Ford..."
+          maxlength="100" value={{manufacturer}}>
+        </div>
+        <div class="input-group">
+          <label for="budget">Price ($)</label>
+          <input type="number" name="budget" id="budget" class="input-box" placeholder="eg. 500, 5000, 10000" value={{price}}>
+        </div>
+        <div class="input-group">
+          <label for="description"> Description</label>
+          <textarea name="description" id="description" class="input-box" placeholder=""
+            rows="10">{{description}}</textarea>
+        </div>
+        <div class="input-group">
+          <label for="budget">Contact Email</label>
+          <input type="email" name="contact_email" id="contactemail" class="input-box" placeholder="Enter an email" value={{user.email}}>
+        </div>
+        <input type="submit" value="Add Car" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>
